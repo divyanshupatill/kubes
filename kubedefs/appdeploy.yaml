@@ -24,6 +24,7 @@ spec:
       initContainers:
         - name: init-mydb
           image: busybox
+          command: ['sh']
           args:
             [
               "-c",
@@ -31,6 +32,7 @@ spec:
             ]
         - name: init-memcache
           image: busybox
+          command: ['sh']
           args:
             [
               "-c",
