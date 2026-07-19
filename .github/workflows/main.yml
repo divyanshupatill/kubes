@@ -166,6 +166,8 @@ jobs:
         run: |
           mkdir -p $HOME/.kube
           echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > $HOME/.kube/config
+          CLUSTER_NAME=$(kubectl config view --minify -o jsonpath='{.clusters[0].name}')
+          kubectl config set-cluster $CLUSTER_NAME --insecure-skip-tls-verify=true
 
       - name: Update App Image Tag in Deployment File
         run: |
