@@ -98,7 +98,7 @@ jobs:
           cache: maven
 
       - name: Run Checkstyle Analysis
-        run: mvn checkstyle:check
+        run: mvn checkstyle:checkstyle
 
       - name: Upload Checkstyle Report
         uses: actions/upload-artifact@v4
