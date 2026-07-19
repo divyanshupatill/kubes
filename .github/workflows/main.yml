@@ -161,10 +161,6 @@ jobs:
       - name: Checkout Code from GitHub
         uses: actions/checkout@v4
 
-      - name: Setup kubectl Tool
-        uses: azure/setup-kubectl@v4
-        with:
-          version: 'latest'
 
       - name: Connect to Kubernetes Cluster
         run: |
