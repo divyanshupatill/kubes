@@ -4,6 +4,7 @@ metadata:
   name: vpromc
   labels:
     app: vpromc
+    tier: cache
 spec:
   selector:
     matchLabels:

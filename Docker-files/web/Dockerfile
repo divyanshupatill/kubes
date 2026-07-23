@@ -1,6 +1,7 @@
+# Nginx reverse proxy Dockerfile for vProfile
 FROM nginx
 LABEL "Project"="Vprofile"
-LABEL "Author"="Imran"
+LABEL "Author"="Divyanshu"
 
 RUN rm -rf /etc/nginx/conf.d/default.conf
-COPY nginvproapp.conf /etc/nginx/conf.d/vproapp.conf
+COPY nginvproapp.conf /etc/nginx/conf.d/vproapp.conf
