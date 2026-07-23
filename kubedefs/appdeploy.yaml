@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: vproapp
-          image: vprofileapp:latest
+          image: div1234/tomcat
           imagePullPolicy: Always
           ports:
             - name: vproapp-port
