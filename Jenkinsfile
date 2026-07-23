@@ -1,6 +1,5 @@
-// vProfile CI/CD Pipeline - Jenkins
 pipeline {
-
+    
 	agent any
 /*	
 	tools {
@@ -25,7 +24,7 @@ pipeline {
             }
             post {
                 success {
-                    echo 'Build successful — Archiving WAR artifact...'
+                    echo 'Now Archiving...'
                     archiveArtifacts artifacts: '**/target/*.war'
                 }
             }
@@ -49,7 +48,7 @@ pipeline {
             }
             post {
                 success {
-                    echo 'Checkstyle analysis completed successfully'
+                    echo 'Generated Analysis Result'
                 }
             }
         }

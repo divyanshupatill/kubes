@@ -1,11 +1,8 @@
-# vProfile Multistage Build - Build from source and deploy
 FROM maven:3.9.9-eclipse-temurin-21-jammy AS BUILD_IMAGE
 RUN git clone https://github.com/hkhcoder/vprofile-project.git
 RUN cd vprofile-project && git checkout docker && mvn install
 
 FROM tomcat:10-jdk21
-LABEL "Project"="Vprofile"
-LABEL "Author"="Divyanshu"
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 

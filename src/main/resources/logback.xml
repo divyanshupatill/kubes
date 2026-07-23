@@ -4,8 +4,7 @@
 
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-		<!-- Log pattern: timestamp [thread] level logger#line message -->
-		<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{15}#%line %msg%n</pattern>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{15}#%line %msg%n</pattern>
 		</encoder>
 	</appender>
 

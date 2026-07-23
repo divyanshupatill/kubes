@@ -4,7 +4,6 @@ metadata:
   name: vprodb
   labels:
     app: vprodb
-    tier: database
 spec:
   selector:
     matchLabels:

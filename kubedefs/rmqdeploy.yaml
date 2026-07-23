@@ -4,7 +4,6 @@ metadata:
   name: vpromq01
   labels:
     app: vpromq01
-    tier: messaging
 spec:
   selector:
     matchLabels:

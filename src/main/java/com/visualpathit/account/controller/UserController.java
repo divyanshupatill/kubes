@@ -16,9 +16,6 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * Controller for handling user registration, login, and profile management.
- */
 @Controller
 public class UserController {
 

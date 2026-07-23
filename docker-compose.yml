@@ -1,4 +1,3 @@
-# Docker Compose for vProfile multi-tier application
 version: '3.8'
 services:
   vprodb:
@@ -15,13 +14,11 @@ services:
 
   vprocache01:
     image: memcached
-    container_name: vprocache01
     ports:
       - "11211:11211"
 
   vpromq01:
     image: rabbitmq
-    container_name: vpromq01
     ports:
       - "5672:5672"
     environment:
@@ -29,7 +26,7 @@ services:
       - RABBITMQ_DEFAULT_PASS=guest
 
   vproapp:
-    build:
+    build: 
       context: ./Docker-files/app
     image: vprocontainers/vprofileapp
     container_name: vproapp
@@ -37,10 +34,7 @@ services:
       - "8080:8080"
     volumes:
       - vproappdata:/usr/local/tomcat/webapps
-    depends_on:
-      - vprodb
-      - vprocache01
-      - vpromq01
+    
   vproweb:
     build: 
       context: ./Docker-files/web
